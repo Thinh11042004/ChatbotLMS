@@ -1,0 +1,12 @@
+langchain
+langchain-community
+langchain-openai
+langchain-neo4j
+openai
+neo4j
+python-dotenv
+pandas
+tqdm
+google-generativeai
+flask
+flask_cors
