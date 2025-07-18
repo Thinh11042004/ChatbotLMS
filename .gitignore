@@ -1,0 +1,55 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoint
+.ipynb_checkpoints/
+
+# VSCode settings
+.vscode/
+
+# Environment
+.env
+.env.*
+*.env
+
+# Virtual environment folders
+venv/
+env/
+.venv/
+.envrc
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Token / Key / Cache
+*.token
+*.cache
+*.bak
+
+# Model checkpoints / output
+*.pth
+*.pt
+*.ckpt
+*.h5
+
+# pyenv
+.python-version
+
+# Pip dependency logs
+pip-log.txt
+
+# Coverage reports
+htmlcov/
+coverage.xml
+.cache
+
+# Distribution
+build/
+dist/
+*.egg-info/
