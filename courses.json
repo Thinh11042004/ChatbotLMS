@@ -1,0 +1,784 @@
+[
+  {
+    "code": "POS104",
+    "name": "Triết học Mác - Lênin",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "POS105",
+    "name": "Kinh tế chính trị Mác - Lênin",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "POS106",
+    "name": "Chủ nghĩa xã hội khoa học",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "POS107",
+    "name": "Lịch sử Đảng Cộng sản Việt Nam",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "POS103",
+    "name": "Tư tưởng Hồ Chí Minh",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "ENC101",
+    "name": "Tiếng Anh 1",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "ENC102",
+    "name": "Tiếng Anh 2",
+    "summary": "",
+    "prerequisites": [
+      "ENC101"
+    ],
+    "clos": []
+  },
+  {
+    "code": "ENC103",
+    "name": "Tiếng Anh 3",
+    "summary": "",
+    "prerequisites": [
+      "ENC102"
+    ],
+    "clos": []
+  },
+  {
+    "code": "ENC104",
+    "name": "Tiếng Anh 4",
+    "summary": "",
+    "prerequisites": [
+      "ENC103"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP163",
+    "name": "Công tác kỹ sư ngành Công nghệ thông tin",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "MAT101",
+    "name": "Đại số tuyến tính",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "MAT118",
+    "name": "Giải tích",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "ENS109",
+    "name": "Môi trường",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "PSY167",
+    "name": "Tâm lý học ứng dụng",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "SKL115",
+    "name": "Tư duy thiết kế dự án",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "SKL116",
+    "name": "Đổi mới sáng tạo và tư duy khởi nghiệp",
+    "summary": "",
+    "prerequisites": [
+      "SKL115"
+    ],
+    "clos": []
+  },
+  {
+    "code": "LAW106",
+    "name": "Pháp luật đại cương",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "MAT105",
+    "name": "Xác suất thống kê",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "MAT104",
+    "name": "Toán rời rạc",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP1074",
+    "name": "Cơ sở lập trình",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP164",
+    "name": "Kỹ thuật lập trình",
+    "summary": "",
+    "prerequisites": [
+      "CMP1074"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP167",
+    "name": "Lập trình hướng đối tượng",
+    "summary": "Học phần này giúp sinh viên tiếp cận với các khái niệm cơ bản, các tính chất, đặc điểm của phương pháp lập trình hướng đối tượng, từng bước tiếp cận cách phân tích, thiết kế và hiện thực một chương trình theo phương pháp hướng đối tượng. Đồng thời, sinh viên bước đầu làm quen với ngôn ngữ lập trình hướng đối tượng Java, có thể sử dụng ngôn ngữ Java để hiện thực được một chương trình theo phương pháp hướng đối tượng.",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "COS135",
+    "name": "Nhập môn cơ sở dữ liệu",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "COS136",
+    "name": "Phân tích và quản trị cơ sở dữ liệu",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP175",
+    "name": "Lập trình web",
+    "summary": "Học phần nhằm trang bị cho sinh viên kiến thức xây dựng hoàn thành một website ASP.NET có tính tương thích cao với các thiết bị di động. Cung cấp kiến thức về lập trình Razor View, LINQ, Entity Framework, jQuery. Kỹ thuật lập trình Entity Framework Code-First, Model-First và Database-First trong các dự án ASP.NET MVC. Bảo vệ website với chế độ Authentication và Authorization. Từ đó sinh viên có thể nắm vững và tìm hiểu được các thành phần tạo thành một ứng dụng website cho một dự án thực tế.",
+    "prerequisites": [
+      "CMP167"
+    ],
+    "clos": []
+  },
+  {
+    "code": "COS120",
+    "name": "Cấu trúc dữ liệu và giải thuật",
+    "summary": "",
+    "prerequisites": [
+      "CMP164"
+    ],
+    "clos": []
+  },
+  {
+    "code": "COS101",
+    "name": "Cơ sở dữ liệu nâng cao",
+    "summary": "",
+    "prerequisites": [
+      "COS135"
+    ],
+    "clos": []
+  },
+  {
+    "code": "COS137",
+    "name": "Nhập môn kiến trúc máy tính",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "COS138",
+    "name": "Nhập môn hệ điều hành",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP174",
+    "name": "Bảo mật thông tin",
+    "summary": "",
+    "prerequisites": [
+      "CMP167"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP101",
+    "name": "Công nghệ phần mềm",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP180",
+    "name": "Lập trình mạng máy tính",
+    "summary": "",
+    "prerequisites": [
+      "CMP172"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP170",
+    "name": "Lập trình trên môi trường Windows",
+    "summary": "Học phần được xây dựng với các nội dung: \n- Kiến thức tổng quan về .NET Framework;\n- Xây dựng ứng dụng Windows Form thông qua ngôn ngữ C#;\n- Xây dựng ứng dụng Windows Form kết nối với hệ cơ sở dữ liệu Microsoft SQL Server.",
+    "prerequisites": [
+      "CMP167"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP177",
+    "name": "Lập trình trên thiết bị di động",
+    "summary": "",
+    "prerequisites": [
+      "CMP167"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP172",
+    "name": "Mạng máy tính",
+    "summary": "",
+    "prerequisites": [
+      "COS138"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP184",
+    "name": "Phân tích thiết kế hệ thống",
+    "summary": "Sinh viên vận dụng được lý thuyết phân tích thiết kế để xây dựng được mô hình dữ liệu, từ đó xây dựng các đối tượng dữ liệu cơ bản và mô hình phân tích hướng đối tượng UML. Biết xây dựng các mô hình cần thiết và cơ bản để chuyển sang việc tổ chức và cài đặt một chương trình quản lý một hệ thống thông tin bằng một hệ quản trị cơ sở dữ liệu và ngôn ngữ lập trình hướng đối tượng. Phương pháp hướng đối tượng giúp chúng ta xử lý các vấn đề phức tạp trong phát triển phần mềm và tạo ra các thế hệ phần mềm có khả năng thích ứng, tái sử dụng bởi tính kế thừa và bền chắc.",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "MAN104",
+    "name": "Quản lý dự án công nghệ thông tin",
+    "summary": "",
+    "prerequisites": [
+      "CMP101"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP169",
+    "name": "Trí tuệ nhân tạo",
+    "summary": "Môn học cung cấp các khái niệm nền tảng về trí tuệ nhân tạo, cách giải một số bài toán điển hình trong trí tuệ nhân tạo như tô màu đồ thị, tìm kiếm lời giải, biểu diễn và xử lý tri thức và học máy.",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP383",
+    "name": "Thực hành an toàn máy chủ Windows",
+    "summary": "",
+    "prerequisites": [
+      "COS138"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP382",
+    "name": "Thực hành bảo mật thông tin",
+    "summary": "",
+    "prerequisites": [
+      "CMP174"
+    ],
+    "clos": []
+  },
+  {
+    "code": "COS339",
+    "name": "Thực hành bảo mật thông tin nâng cao",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "COS321",
+    "name": "Thực hành cấu trúc dữ liệu và giải thuật",
+    "summary": "",
+    "prerequisites": [
+      "COS120"
+    ],
+    "clos": []
+  },
+  {
+    "code": "COS323",
+    "name": "Thực hành cơ sở dữ liệu",
+    "summary": "",
+    "prerequisites": [
+      "COS135"
+    ],
+    "clos": []
+  },
+  {
+    "code": "COS318",
+    "name": "Thực hành hệ điều hành",
+    "summary": "",
+    "prerequisites": [
+      "COS138"
+    ],
+    "clos": []
+  },
+  {
+    "code": "COS319",
+    "name": "Thực hành kiến trúc máy tính",
+    "summary": "",
+    "prerequisites": [
+      "COS137"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP3075",
+    "name": "Thực hành Cơ sở lập trình",
+    "summary": "",
+    "prerequisites": [
+      "CMP1074"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP365",
+    "name": "Thực hành kỹ thuật lập trình",
+    "summary": "Học phần Thực hành kỹ thuật lập trình cung cấp cho sinh viên những kỹ năng thực hành nâng cao về mảng, struct, con trỏ, tập tin, kỹ thuật đệ quy, template, các thư viện có sẵn, các thuật toán sắp xếp và tìm kiếm với ngôn ngữ lập trình C/C++. Môn học này giúp củng cố kiến thức lập trình và hỗ trợ tiếp thu các môn học chuyên ngành trong chương trình đào tạo. Mặt khác, nắm vững môn này là cơ sở để phát triển tư duy và kỹ năng lập trình để giải các bài toán và các ứng dụng trong thực tế.",
+    "prerequisites": [
+      "CMP164"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP368",
+    "name": "Thực hành lập trình hướng đối tượng",
+    "summary": "",
+    "prerequisites": [
+      "CMP167"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP381",
+    "name": "Thực hành lập trình mạng máy tính",
+    "summary": "",
+    "prerequisites": [
+      "CMP180"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP371",
+    "name": "Thực hành lập trình trên môi trường Windows",
+    "summary": "",
+    "prerequisites": [
+      "CMP170"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP376",
+    "name": "Thực hành lập trình Web",
+    "summary": "Học phần này cung cấp các kiến thức từ cơ bản đến nâng cao và áp dụng các công nghệ như LINQ, Entity Framework Code First, Database first… để phát triển ứng dụng website trên nền tảng ASP.NET MVC có tính tương thích cao trên các thiết bị di động, tablet, desktop.",
+    "prerequisites": [
+      "CMP175"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP3014",
+    "name": "Thực hành lý thuyết đồ thị",
+    "summary": "",
+    "prerequisites": [
+      "COS120"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP373",
+    "name": "Thực hành mạng máy tính",
+    "summary": "",
+    "prerequisites": [
+      "CMP172"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP385",
+    "name": "Thực hành phân tích thiết kế hệ thống",
+    "summary": "",
+    "prerequisites": [
+      "COS136"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP3019",
+    "name": "Thực hành phân tích thiết kế theo hướng đối tượng",
+    "summary": "",
+    "prerequisites": [
+      "CMP184"
+    ],
+    "clos": []
+  },
+  {
+    "code": "COS340",
+    "name": "Thực hành Phát triển phần mềm mã nguồn mở",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "COS324",
+    "name": "Thực hành quản trị cơ sở dữ liệu",
+    "summary": "",
+    "prerequisites": [
+      "COS136"
+    ],
+    "clos": []
+  },
+  {
+    "code": "CMP437",
+    "name": "Đồ án cơ sở công nghệ thông tin",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP436",
+    "name": "Đồ án chuyên ngành Công nghệ thông tin",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP596",
+    "name": "Thực tập tốt nghiệp ngành Công nghệ thông tin (*)",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP186",
+    "name": "Công cụ và môi trường phát triển phần mềm",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP179",
+    "name": "Kiểm thử và đảm bảo chất lượng phần mềm",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CAP126",
+    "name": "Ngôn ngữ phát triển ứng dụng mới",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "COS141",
+    "name": "Phát triển ứng dụng với J2EE",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "COS125",
+    "name": "Cơ sở dữ liệu phân tán",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "COS126",
+    "name": "Hệ quản trị cơ sở dữ liệu Oracle",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "COS127",
+    "name": "Kho dữ liệu và khai thác dữ liệu",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP189",
+    "name": "Phân tích dữ liệu trên điện toán đám mây",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "COS129",
+    "name": "Điện toán đám mây",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "COS128",
+    "name": "Hệ điều hành Linux",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP192",
+    "name": "Mạng máy tính nâng cao",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP191",
+    "name": "Quản trị mạng",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP1020",
+    "name": "Học sâu",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP1021",
+    "name": "Thị giác máy tính",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP1022",
+    "name": "Trí tuệ nhân tạo cho internet vạn vật",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP1023",
+    "name": "Công nghệ ứng dụng robot",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "COS130",
+    "name": "An toàn hệ điều hành và ngôn ngữ lập trình",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP195",
+    "name": "An toàn hệ thống mạng máy tính",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP194",
+    "name": "An toàn thông tin cho ứng dụng Web",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP193",
+    "name": "Phân tích và đánh giá an toàn thông tin",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "CMP497",
+    "name": "Đồ án tốt nghiệp ngành Công nghệ thông tin (*)",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "PHT304",
+    "name": "Bóng chuyền 1",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "PHT305",
+    "name": "Bóng chuyền 2",
+    "summary": "",
+    "prerequisites": [
+      "PHT304"
+    ],
+    "clos": []
+  },
+  {
+    "code": "PHT306",
+    "name": "Bóng chuyền 3",
+    "summary": "",
+    "prerequisites": [
+      "PHT305"
+    ],
+    "clos": []
+  },
+  {
+    "code": "PHT307",
+    "name": "Bóng rổ 1",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "PHT308",
+    "name": "Bóng rổ 2",
+    "summary": "",
+    "prerequisites": [
+      "PHT307"
+    ],
+    "clos": []
+  },
+  {
+    "code": "PHT309",
+    "name": "Bóng rổ 3",
+    "summary": "",
+    "prerequisites": [
+      "PHT308"
+    ],
+    "clos": []
+  },
+  {
+    "code": "PHT310",
+    "name": "Thể hình - Thẩm mỹ 1",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "PHT311",
+    "name": "Thể hình - Thẩm mỹ 2",
+    "summary": "",
+    "prerequisites": [
+      "PHT310"
+    ],
+    "clos": []
+  },
+  {
+    "code": "PHT312",
+    "name": "Thể hình - Thẩm mỹ 3",
+    "summary": "",
+    "prerequisites": [
+      "PHT311"
+    ],
+    "clos": []
+  },
+  {
+    "code": "PHT313",
+    "name": "Vovinam 1",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "PHT314",
+    "name": "Vovinam 2",
+    "summary": "",
+    "prerequisites": [
+      "PHT313"
+    ],
+    "clos": []
+  },
+  {
+    "code": "PHT315",
+    "name": "Vovinam 3",
+    "summary": "",
+    "prerequisites": [
+      "PHT314"
+    ],
+    "clos": []
+  },
+  {
+    "code": "PHT316",
+    "name": "Bóng đá 1",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "PHT317",
+    "name": "Bóng đá 2",
+    "summary": "",
+    "prerequisites": [
+      "PHT316"
+    ],
+    "clos": []
+  },
+  {
+    "code": "PHT318",
+    "name": "Bóng đá 3",
+    "summary": "",
+    "prerequisites": [
+      "PHT317"
+    ],
+    "clos": []
+  },
+  {
+    "code": "NDF108",
+    "name": "Quốc phòng, an ninh 1",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "NDF109",
+    "name": "Quốc phòng, an ninh 2",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "NDF210",
+    "name": "Quốc phòng, an ninh 3",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  },
+  {
+    "code": "NDF211",
+    "name": "Quốc phòng, an ninh 4",
+    "summary": "",
+    "prerequisites": [],
+    "clos": []
+  }
+]

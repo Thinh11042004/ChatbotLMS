@@ -1,0 +1,67 @@
+
+=== LOG hãy cho tôi thông tin về môn học lập trình web ===
+Prompt: Bạn là trợ lý học vụ đại học.
+Chỉ sử dụng thông ti...
+RETRIEVED: 6 docs
+RERANKED TOP: Tóm tắt: Học phần nhằm trang bị cho sinh viên kiến thức xây dựng hoàn thành một website ASP.NET có tính tương thích cao ...
+ANSWER: Mã học phần: CMP175
+Tên: Lập trình web
+==================================================
+
+=== LOG Tài liệu được truy xuất có chứa nội dung liên quan không? ===
+Prompt: Bạn là trợ lý học vụ đại học.
+Chỉ sử dụng thông ti...
+RETRIEVED: 6 docs
+RERANKED TOP: Mã học phần: COS127
+Tên: Kho dữ liệu và khai thác dữ liệu
+Tóm tắt: 
+Tiên quyết: 
+Chuẩn đầu ra:...
+ANSWER: Tôi không có đủ thông tin để trả lời câu hỏi này.
+==================================================
+
+=== LOG Hãy cung cấp toàn bộ nội dung của học phần lập tình web ===
+Prompt: Bạn là trợ lý học vụ đại học.
+Chỉ sử dụng thông ti...
+RETRIEVED: 6 docs
+RERANKED TOP: Tóm tắt: Học phần nhằm trang bị cho sinh viên kiến thức xây dựng hoàn thành một website ASP.NET có tính tương thích cao ...
+ANSWER: Tôi không có đủ thông tin để trả lời câu hỏi này.
+==================================================
+
+=== LOG Các topic có trong học phần lập trình web ===
+Prompt: Bạn là trợ lý học vụ đại học.
+Chỉ sử dụng thông ti...
+RETRIEVED: 6 docs
+RERANKED TOP: Tóm tắt: Học phần nhằm trang bị cho sinh viên kiến thức xây dựng hoàn thành một website ASP.NET có tính tương thích cao ...
+ANSWER: Tôi không có đủ thông tin để trả lời câu hỏi này.
+==================================================
+
+=== LOG Cho tôi lộ trình để học lập trình web ===
+Prompt: Bạn là cố vấn học tập.
+Dựa trên thông tin dưới đây...
+RETRIEVED: 6 docs
+RERANKED TOP: Tóm tắt: Học phần nhằm trang bị cho sinh viên kiến thức xây dựng hoàn thành một website ASP.NET có tính tương thích cao ...
+ANSWER: 1. Bắt đầu với học phần "Cơ sở lập trình" (CMP1074). Đây là học phần cơ bản nhất và không yêu cầu tiên quyết nào.
+2. Tiếp theo, hãy học "Thực hành lập trình trên môi trường Windows" (CMP371). Học phần này yêu cầu bạn phải hoàn thành học phần "Cơ sở lập trình" (CMP1074) trước.
+3. Sau khi hoàn thành học phần CMP371, bạn có thể tiếp tục với học phần "Lập trình web" (CMP175).
+4. Cuối cùng, sau khi hoàn thành học phần CMP175, bạn có thể học "Thực hành lập trình Web" (CMP376) để nâng cao kỹ năng lập trình web của mình.
+==================================================
+
+=== LOG ác topic có trong học phần lập trình web ===
+Prompt: Bạn là trợ lý học vụ đại học chuyên liệt kê nội du...
+RETRIEVED: 6 docs
+RERANKED TOP: Tóm tắt: Học phần nhằm trang bị cho sinh viên kiến thức xây dựng hoàn thành một website ASP.NET có tính tương thích cao ...
+ANSWER: 1. Giới thiệu về lập trình Web và ASP.NET
+2. Lập trình Razor View
+3. Sử dụng LINQ trong lập trình Web
+4. Hiểu và sử dụng Entity Framework
+5. Kỹ thuật lập trình Entity Framework Code-First
+6. Kỹ thuật lập trình Entity Framework Model-First
+7. Kỹ thuật lập trình Entity Framework Database-First
+8. Sử dụng jQuery trong lập trình Web
+9. Xây dựng website tương thích với các thiết bị di động
+10. Bảo vệ website với chế độ Authentication
+11. Bảo vệ website với chế độ Authorization
+12. Phát triển ứng dụng website trên nền tảng ASP.NET MVC
+13. Thực hành xây dựng và hoàn thiện một dự án website thực tế.
+==================================================

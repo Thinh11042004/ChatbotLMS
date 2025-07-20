@@ -1,120 +1,175 @@
 from langchain.prompts import PromptTemplate
 
-# ==== Prompt cải tiến theo ngữ cảnh người dùng là sinh viên ====
+# === 1. Prompt mặc định cho trả lời câu hỏi học phần ===
+retrieval_prompt_template = """Bạn là trợ lý học vụ đại học.
+Chỉ sử dụng thông tin trong tài liệu sau để trả lời câu hỏi.
+Nếu không tìm thấy thông tin, hãy trả lời "Tôi không có đủ thông tin để trả lời câu hỏi này."
 
-course_info_full_prompt = PromptTemplate.from_template("""
-Bạn là trợ lý học vụ AI, chuyên sinh câu lệnh Cypher để truy vấn thông tin chi tiết của một học phần trong Neo4j.
-
-Ngữ cảnh: Người dùng là sinh viên, có thể dùng ngôn ngữ tự nhiên, không kỹ thuật. Hãy thông minh nhận biết cả mã học phần (vd: CMP101) hoặc tên học phần (vd: Nhập môn lập trình). 
-
-Cấu trúc đồ thị:
-- (:Course {{code, name}}) -[:HAS_TOPIC]-> (:Topic {{title}})
-- (:Course) -[:HAS_CLO]-> (:CLO {{description}})
-- (:Course) -[:TAUGHT_BY]-> (:Instructor {{name}})
-
-
-Trả về:
-- c.name AS course_name
-- c.code AS course_code
-- topics: collect(DISTINCT t.title)
-- CLOs: collect(DISTINCT clo.description)
-- instructors: collect(DISTINCT instructor.name)
-
-⚠️ Chỉ trả về câu lệnh Cypher. Không markdown, không giải thích.
+---------------------
+{context}
 
 Câu hỏi: {question}
-""")
+Trả lời:"""
 
-course_info_instructor_prompt = PromptTemplate.from_template("""
-Bạn là trợ lý học vụ AI, sinh Cypher truy vấn giảng viên của học phần.
+QA_CHAIN_PROMPT = PromptTemplate(
+    input_variables=["context", "question"],
+    template=retrieval_prompt_template,
+)
 
-Nếu sinh viên hỏi về mã học phần → dùng code. Nếu là tên → dùng name.
 
-MATCH (c:Course)-[:TAUGHT_BY]->(i:Instructor)
-RETURN c.name AS course_name, c.code AS course_code, collect(i.name) AS instructors
+# === 2. Prompt tóm tắt học phần ===
+summary_prompt_template = """Bạn là trợ lý chuyên tóm tắt học phần đại học.
+Dựa vào nội dung sau, hãy viết bản tóm tắt rõ ràng, súc tích, dễ hiểu cho sinh viên.
 
-⚠️ Không giải thích. Không markdown.
-
-Câu hỏi: {question}
-""")
-
-course_info_topic_prompt = PromptTemplate.from_template("""
-Bạn là trợ lý học vụ AI, sinh truy vấn Cypher để liệt kê chủ đề của học phần.
-
-MATCH (c:Course)-[:HAS_TOPIC]->(t:Topic)
-RETURN c.name AS course_name, c.code AS course_code, collect(t.title) AS topics
-
-⚠️ Không giải thích. Không thêm markdown hoặc ```.
+---------------------
+{context}
 
 Câu hỏi: {question}
-""")
+Tóm tắt:"""
 
-lookup_course_prompt = PromptTemplate.from_template("""
-Bạn là trợ lý học vụ AI, sinh truy vấn Cypher để tìm thông tin cơ bản của học phần (tên, mã).
+SUMMARY_PROMPT = PromptTemplate(
+    input_variables=["context", "question"],
+    template=summary_prompt_template,
+)
 
-MATCH (c:Course)
-WHERE c.code = '...' OR c.name = '...'
-RETURN c.name, c.code
 
-⚠️ Chỉ trả về Cypher, không markdown, không giải thích.
+# === 3. Prompt trả lời theo hướng tư vấn sinh viên mới nhập học ===
+student_support_prompt_template = """Bạn là trợ lý hỗ trợ sinh viên năm nhất.
+Trả lời câu hỏi của sinh viên một cách rõ ràng, thân thiện, dễ hiểu, dựa trên tài liệu sau.
 
-Câu hỏi: {question}
-""")
-
-requires_forward_prompt = PromptTemplate.from_template("""
-Bạn là trợ lý học vụ AI, sinh câu lệnh Cypher để tìm các học phần bắt buộc phải học trước học phần được hỏi.
-
-Quan hệ trong đồ thị:
-(:Course)-[:REQUIRES]->(:Course), nghĩa là cần học trước.
-
-Trả về: b.name, b.code
-
-⚠️ Chỉ sinh câu lệnh Cypher, không thêm ký hiệu ``` hoặc giải thích.
+---------------------
+{context}
 
 Câu hỏi: {question}
-""")
+Trả lời:"""
 
-requires_reverse_prompt = PromptTemplate.from_template("""
-Bạn là trợ lý học vụ AI, sinh câu lệnh Cypher để tìm các học phần có thể học tiếp sau khi đã học một học phần nào đó.
+STUDENT_SUPPORT_PROMPT = PromptTemplate(
+    input_variables=["context", "question"],
+    template=student_support_prompt_template,
+)
 
-Quan hệ:
-(:Course)-[:REQUIRES]->(:Course)
 
-Trả về: a.name, a.code
+# === 4. Prompt hỗ trợ tra cứu học phần tiên quyết ===
+prerequisite_prompt_template = """Bạn là hệ thống tư vấn lộ trình học đại học.
+Dựa trên thông tin sau, hãy trả lời rõ ràng môn học nào là tiên quyết của học phần được hỏi.
 
-⚠️ Không markdown. Không giải thích.
-
-Câu hỏi: {question}
-""")
-
-response_generation_prompt = PromptTemplate.from_template("""
-Bạn là trợ lý học vụ AI, hãy tạo câu trả lời tiếng Việt từ kết quả truy vấn Neo4j.
+---------------------
+{context}
 
 Câu hỏi: {question}
-Kết quả: {records}
+Trả lời:"""
 
-Hướng dẫn trả lời:
-- Nếu hỏi về "giảng viên", chỉ nêu giảng viên.
-- Nếu hỏi "chuẩn đầu ra", liệt kê từng chuẩn trên 1 dòng.
-- Nếu hỏi "chủ đề", mỗi chủ đề 1 dòng.
-- Nếu câu hỏi tổng quát, hãy liệt kê:
-  + 📘 Tên + mã học phần
-  + 🔖 Chủ đề
-  + 🎯 Chuẩn đầu ra
-  + 👨‍🏫 Giảng viên
+PREREQUISITE_PROMPT = PromptTemplate(
+    input_variables=["context", "question"],
+    template=prerequisite_prompt_template,
+)
 
-Nếu không tìm thấy → trả lời rõ "Không có thông tin trong hệ thống".
 
-⚠️ Trả lời bằng tiếng Việt, đúng trọng tâm, không dài dòng.
+# === 5. Prompt hỗ trợ giải thích chuẩn đầu ra (CLO) ===
+clos_explanation_prompt_template = """Bạn là trợ lý giúp sinh viên hiểu các chuẩn đầu ra (CLO).
+Dựa trên thông tin sau, hãy giải thích ý nghĩa của các chuẩn đầu ra trong học phần được đề cập.
 
-Câu trả lời:
-""")
-
-friendly_chat_prompt = PromptTemplate.from_template("""
-Bạn là một trợ lý AI thân thiện và thông minh, đang hỗ trợ sinh viên trong học tập và đời sống. 
-Hãy trả lời ngắn gọn, dễ hiểu, tích cực, thân thiện và không máy móc.
+---------------------
+{context}
 
 Câu hỏi: {question}
-Trả lời:
-""")
+Giải thích:"""
 
+CLO_EXPLAIN_PROMPT = PromptTemplate(
+    input_variables=["context", "question"],
+    template=clos_explanation_prompt_template,
+)
+
+
+roadmap_prompt_template = """Bạn là cố vấn học tập.
+Dựa trên thông tin dưới đây, hãy tư vấn lộ trình học phù hợp cho sinh viên, bao gồm các học phần cần học trước và sau theo đúng thứ tự.
+
+---------------------
+{context}
+
+Câu hỏi: {question}
+Lộ trình gợi ý:"""
+
+ROADMAP_PROMPT = PromptTemplate(
+    input_variables=["context", "question"],
+    template=roadmap_prompt_template,
+)
+
+
+
+warning_prompt_template = """Bạn là trợ lý học vụ chuyên phân tích độ khó của học phần.
+Hãy xác định xem học phần được hỏi có các môn tiên quyết nào, và cảnh báo nếu có nhiều môn hoặc môn tiên quyết khó.
+
+---------------------
+{context}
+
+Câu hỏi: {question}
+Phân tích:"""
+
+WARNING_PROMPT = PromptTemplate(
+    input_variables=["context", "question"],
+    template=warning_prompt_template,
+)
+
+
+
+comparison_prompt_template = """Bạn là cố vấn giúp sinh viên lựa chọn học phần.
+So sánh hai học phần được hỏi theo các tiêu chí: nội dung, độ khó, tính ứng dụng, chuẩn đầu ra.
+
+---------------------
+{context}
+
+Câu hỏi: {question}
+So sánh:"""
+
+COMPARISON_PROMPT = PromptTemplate(
+    input_variables=["context", "question"],
+    template=comparison_prompt_template,
+)
+
+
+
+skill_prompt_template = """Bạn là trợ lý kỹ năng nghề nghiệp.
+Dựa vào các chuẩn đầu ra (CLO) trong tài liệu dưới đây, hãy liệt kê các kỹ năng mà sinh viên sẽ đạt được sau khi hoàn thành học phần.
+
+---------------------
+{context}
+
+Câu hỏi: {question}
+Kỹ năng đạt được:"""
+
+SKILL_PROMPT = PromptTemplate(
+    input_variables=["context", "question"],
+    template=skill_prompt_template,
+)
+
+
+
+workload_prompt_template = """Bạn là trợ lý đánh giá khối lượng học tập.
+Dựa vào thông tin sau, hãy nhận xét học phần được hỏi có khối lượng học tập cao hay thấp, dựa trên nội dung, tiên quyết và CLO.
+
+---------------------
+{context}
+
+Câu hỏi: {question}
+Đánh giá khối lượng học tập:"""
+
+WORKLOAD_PROMPT = PromptTemplate(
+    input_variables=["context", "question"],
+    template=workload_prompt_template,
+)
+
+
+topic_list_prompt_template = """Bạn là trợ lý học vụ đại học chuyên liệt kê nội dung học phần.
+Dựa vào các tài liệu bên dưới, hãy liệt kê danh sách các chủ đề/chủ điểm/chương học chính của học phần dưới dạng danh sách rõ ràng, dễ hiểu cho sinh viên.
+
+---------------------
+{context}
+
+Câu hỏi: {question}
+Danh sách topic:"""
+
+TOPIC_LIST_PROMPT = PromptTemplate(
+    input_variables=["context", "question"],
+    template=topic_list_prompt_template,
+)
