@@ -1,19 +1,9 @@
-# Core LangChain + LLM + Embeddings
-langchain>=0.2.0
-langchain-openai>=0.1.0
-openai>=1.30.0
-tiktoken
-
-# Vector store (FAISS)
-faiss-cpu>=1.7.4
-langchain-community>=0.2.0
-
-# Reranking model
-sentence-transformers>=2.2.2
-transformers>=4.41.0
-
-# Optional but useful
+langchain
+langchain-community
+langchain-google-genai==0.0.8
+faiss-cpu
+sentence-transformers
+transformers
 python-dotenv
+torch
 numpy
-scikit-learn
-

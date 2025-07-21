@@ -9,7 +9,7 @@ __pycache__/
 # VSCode settings
 .vscode/
 
-# Environment
+# Environment variables
 .env
 .env.*
 *.env
@@ -20,25 +20,26 @@ env/
 .venv/
 .envrc
 
-# OS files
+# OS-specific files
 .DS_Store
 Thumbs.db
 
 # Log files
 *.log
+log.txt
 
 # Token / Key / Cache
 *.token
 *.cache
 *.bak
 
-# Model checkpoints / output
+# Model checkpoints / ML output
 *.pth
 *.pt
 *.ckpt
 *.h5
 
-# pyenv
+# pyenv version file
 .python-version
 
 # Pip dependency logs
@@ -49,7 +50,11 @@ htmlcov/
 coverage.xml
 .cache
 
-# Distribution
+# Distribution / build artifacts
 build/
 dist/
 *.egg-info/
+
+# LangChain / Vector DB
+faiss_index/
+Courses.json
